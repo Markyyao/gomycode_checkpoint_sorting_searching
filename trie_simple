@@ -1,0 +1,21 @@
+ALGORITHME trie_simple
+
+VAR
+   T[10] : Table;
+   i,j,temp : integer;
+
+BEGIN
+
+FOR i FROM 1 TO 10 STEP DO
+   WRITE ("Entrer les element à trier");
+   READ (T[i]);
+END FOR
+FOR i FROM 1 TO 9 STEP DO
+   FOR j FROM i+1 TO 10 STEP DO
+      IF (T[i]>T[j]) THEN
+        temp := T[i];
+        T[i] :=T[j];
+        T[j] := temp;
+      END IF
+   END FOR
+END FOR
